@@ -955,12 +955,26 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_CrateCase_TCFood =				[
 											[
 												//WEAPONS
+												["rhsusf_weap_MP7A1_base_f", 1],
+												["rhs_weap_asval_npz", 1]												
 											],
 											[
 												//ITEMS
+												["Exile_Item_GloriousKnakworst_Cooked", 3],
+												["Exile_Item_Surstromming_Cooked", 3],
+												["Exile_Item_SausageGravy_Cooked", 3],
+												["Exile_Item_ChristmasTinner_Cooked", 3],
+												["Exile_Item_BBQSandwich_Cooked", 3],
+												["Exile_Item_Catfood_Cooked", 3],
+												["Exile_Item_DogFood_Cooked", 3],
+												["Exile_Item_EMRE", 6],										
+												["Exile_Item_InstantCoffee", 6],
+												["Exile_Item_CanOpener", 3]
 											],
 											[
 												//BACKSPACE
+												["B_Carryall_oli", 2],										
+												["B_Carryall_cbr", 2]
 											]
 										];
 //UNUSED CUSTOM CRATE										
@@ -1009,10 +1023,10 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 											#ifdef USE_APEX_WEAPONS_IN_CRATES
 											#endif
-									#include "Weapons_Loot_Apex.sqf"		
-									#include "Weapons_Loot_Exile.sqf"
-									#include "Weapons_Loot_RHS.sqf"
-									#include "Weapons_Loot_Bnae.sqf"											
+											#include "Weapons_Loot_Apex.sqf"		
+											#include "Weapons_Loot_Exile.sqf"
+											#include "Weapons_Loot_RHS.sqf"
+											#include "Weapons_Loot_Bnae.sqf"											
 										];
 	DMS_BoxFood =						[							// List of food that can spawn in a crate.
 											"Exile_Item_GloriousKnakworst_Cooked",
