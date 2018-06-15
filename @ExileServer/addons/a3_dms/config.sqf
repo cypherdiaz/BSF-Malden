@@ -464,7 +464,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_AI_destroyStaticWeapon_chance	= 60;						// Percent chance that a static weapon will be destroyed (only applied if "DMS_AI_destroyStaticWeapon" is true)
 
 	DMS_static_weapons =				[							// Static weapons for AI
-											#include "Weapons_AI_Statics.sqf"
+											#include "\AI\Weapons_AI_Statics.sqf"
 										];
 
 	DMS_ai_default_items =				[							// Toolbelt items each AI will spawn with
@@ -489,7 +489,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_assault_weps =					[							// Assault Rifles
 											#ifdef GIVE_AI_APEX_WEAPONS
 											#endif
-											#include "Weapons_AI_Assault.sqf"
+											#include "\AI\Weapons_AI_Assault.sqf"
 											
 										];
 	DMS_assault_pistols =				[							// Pistols for Assault Class (Set to empty array if you don't want to give them any pistols)
@@ -622,7 +622,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											#endif
 											#ifdef GIVE_AI_APEX_WEAPONS
 											#endif
-											#include "Weapons_AI_MG.sqf"
+											#include "\AI\Weapons_AI_MG.sqf"
 										];
 	DMS_MG_pistols =				[							// Pistols for Assault Class (Set to empty array if you don't want to give them any pistols)
 											"hgun_ACPC2_F",
@@ -749,7 +749,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 											#ifdef GIVE_AI_APEX_WEAPONS
 											#endif
-											#include "Weapons_AI_Sniper.sqf"
+											#include "\AI\Weapons_AI_Sniper.sqf"
 										];
 	DMS_sniper_pistols =				[							// Pistols for Assault Class (Set to empty array if you don't want to give them any pistols)
 											#ifdef GIVE_AI_APEX_WEAPONS
@@ -916,7 +916,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_AI_wep_launchers_AT =			[							// AT Launchers
 											#ifdef GIVE_AI_APEX_WEAPONS										
 											#endif
-											#include "Weapons_AI_Launchers.sqf"
+											#include "\AI\Weapons_AI_Launchers.sqf"
 										];
 	DMS_AI_wep_launchers_AA =			[							// AA Launchers
 											""
