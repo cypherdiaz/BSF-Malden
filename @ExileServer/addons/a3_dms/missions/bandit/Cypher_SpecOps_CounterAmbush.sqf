@@ -73,26 +73,6 @@ _PossibleDifficulty		= 	[
 //choose difficulty and set value
 _difficulty = selectRandom _PossibleDifficulty;
 
-switch (_difficulty) do
-{
-	case "difficult":
-	{
-		_AICount = (8 + (round (random 4)));
-		_crate_weapons 		= (3 + (round (random 1)));
-		_crate_items 		= (6 + (round (random 6)));
-		_crate_backpacks 	= (3 + (round (random 1)));
-	};
-
-	//case "hardcore":
-	default
-	{
-		_AICount = (12 + (round (random 6)));
-		_crate_weapons 		= (6 + (round (random 2)));
-		_crate_items 		= (8 + (round (random 7)));
-		_crate_backpacks 	= (4 + (round (random 1)));
-	};
-};
-
 _msgStart = ['#FFFF00',"A SpecOps group ambushed some Convict landing his heavy-lift helicopter! Go kill them and make sure that heli stays in Convict hands!"];
 
 
