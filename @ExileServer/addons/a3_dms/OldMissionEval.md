@@ -64,47 +64,47 @@
 <BR>This mission is actually really messed up. Supposed to reward nicer vics for hardcore, but then it cant spawn as hardcore? What.
 <BR>Use: Another example of IF Hardcore logic circuit, this time with randomization via a pool of possibilities. Other then that, what not to do.
 
-nedguns1_mission.sqf
+**nedguns1_mission.sqf**
 <BR>This mission is almost identical to nedbuilding1_mission.sqf except guns vs building materials.
 
-nedhatchback_mission.sqf
+**nedhatchback_mission.sqf**
 <BR>Virtually identical to nedcar_mission.sqf just not horribly broken.
 <BR>Use: Tieing a random selected difficulty to the difficulty of the AI.
 
-nedhunter_mission.sqf
+**nedhunter_mission.sqf**
 <BR>Diff: Variable; AI: Variable; No Per Vic on Easy, 50% Chance for Per Vic on Moderate, 100% Chance for Per Vic on Diff/Hardcore. 
 <BR>Use: The variable difficulty system at its max. Single vic reward, but with different options to persistence.
 
-nedifrit_mission.sqf
+**nedifrit_mission.sqf**
 <BR>See nedhunter
 
-nedlittlebird_mission.sqf
+**nedlittlebird_mission.sqf**
 <BR>Diff: Variable; AI: Variable; Spawns Per Vic on everything but easy.
 <BR>Use: Yet aother way to spawn a per vic. This one basically does it for anything other than easy. And its from a random list.
 
-nedmedical1_mission.sqf
+**nedmedical1_mission.sqf**
 <BR>See nedlittlebird
 <BR>Use: Same as reference but it also includes a custom crate content list and a base obj
 
-nedresearch_mission.sqf
+**nedresearch_mission.sqf**
 <BR>Diff:Variable; AI: Variable; Custom crate weapon & item list. Building hook. Per vehicle on hardcore.
 <BR>Use: Slightly more useful than nedmedical1.sqf as it shows more stuff.
 
-nedsnipercamp_mission.sqf
+**nedsnipercamp_mission.sqf**
 <BR>Diff:Variable; AI: Variable; Patrol Veh; 2 Statics; Custom crate weapon & item list. Building hook.
 <BR>Use: Integrates custom loot lists into the variable difficulty. Sets AI to specific type too.
 
-nedstrider_mission.sqf
+**nedstrider_mission.sqf**
 <BR>See nedHunter
 
-nedural_mission.sqf
+**nedural_mission.sqf**
 <BR>See nedlittlebird
 
-roguenavyseals.sqf
+**roguenavyseals.sqf**
 <BR>Use: None; basic mission.
 
-thieves.sqf
+**thieves.sqf**
 <BR>Use: Handy way to choose a persistent vehicle to spawn from a separate list (DMS_CarThieves). 
 
-walmart.sqf
+**walmart.sqf**
 <BR>Use: Interesting spawning of a base without doing a _baseObjs.  And it just spawns a lot of random items, nothing special.
