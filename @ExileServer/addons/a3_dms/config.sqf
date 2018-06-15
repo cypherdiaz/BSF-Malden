@@ -931,6 +931,39 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_GodmodeCrates 					= true;						// Whether or not crates will have godmode after being filled with loot.
 	DMS_MinimumMagCount					= 3;						// Minimum number of magazines for weapons.
 	DMS_MaximumMagCount					= 5;						// Maximum number of magazines for weapons.
+//Custom Loot Crate for Cypher_TruckCrash_Medical Mission
+	DMS_CrateCase_TCMedical =			[		
+											[
+												//WEAPONS
+												["rhs_weap_pp2000_folded",1]
+											],
+											[
+												//ITEMS
+												["Exile_Item_Bandage",20],																					
+												["Exile_Item_Vishpirin",10],											
+												["Exile_Item_InstaDoc",10],
+												["Exile_Item_Defibrillator",1],
+												["rhs_mag_9x19mm_7n31_44",4]
+												
+											],
+											[
+												//BACKPACKS
+												["B_Kitbag_mcamo",1]
+											]
+										];
+//Custom Loot Crate for Cypher_TruckCrash_Food Mission	
+	DMS_CrateCase_TCFood =				[
+											[
+												//WEAPONS
+											],
+											[
+												//ITEMS
+											],
+											[
+												//BACKSPACE
+											]
+										];
+//UNUSED CUSTOM CRATE										
 	DMS_CrateCase_Sniper =				[							// If you pass "Sniper" in _lootValues, then it will spawn these weapons/items/backpacks
 											[
 												["Rangefinder",1],
