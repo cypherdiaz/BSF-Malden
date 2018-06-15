@@ -88,13 +88,6 @@ _building = createVehicle ["Land_Medevac_HQ_V1_F",[(_pos select 0) - 10, (_pos s
 
 _wreck = createVehicle ["Land_Wreck_Ural_F",[(_pos select 0) - 10, (_pos select 1),-0.2],[], 0, "CAN_COLLIDE"];
 
-// Set crate loot values
-_crate_loot_values =
-[
-	3,				// Weapons
-	[15,DMS_BoxTruckMed],		// Items
-	3 				// Backpacks
-];
 
 // Define mission-spawned AI Units
 _missionAIUnits =
@@ -107,7 +100,7 @@ _missionObjs =
 [
 	[_building]+[_wreck]+[_veh],			// No spawned buildings
 	[],
-	[[_crate,_crate_loot_values]]
+	[[_crate,"TCMedical"]]
 ];
 
 // Define Mission Start message
