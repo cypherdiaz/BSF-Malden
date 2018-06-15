@@ -1,0 +1,12 @@
+BS-Free Server Document Standard
+
+*These standards currently apply to the following:
+													Defents Mission System
+													
+													
+*The goal of these standards is to organize all of the classname lists in the above files.
+*Instead of a trigger calling to a specific class name, it will call to a SQF document and will use #include to hook it together.
+
+
+*Files following this standard:
+								Weapons_Static.sqf			//This file houses all possible Static Weapons possibly chosen from for AI Missions using DMS.
