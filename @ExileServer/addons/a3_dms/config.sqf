@@ -9,6 +9,12 @@
 	https://github.com/nerdalertdk/WICKED-AI
 */
 
+/*
+	DMS for MALDEN V2.0
+	Modifications done by Cypherdiaz & Troy
+	Specifically for the BS-Free Malden Server
+*/
+
 // You dawg... heard you like configs... so here's some configs for your config.... so you can configure your configuration to make it easier to configure your configuration http://i.imgur.com/9eJjEEo.jpg
 
 
@@ -22,7 +28,7 @@
 //#define GIVE_AI_APEX_WEAPONS 1
 
 // Uncomment this if you want Apex gear on AI. Uniforms, Vests, Backpacks, Helmets,Scopes
-//#define GIVE_AI_APEX_GEAR 1
+#define GIVE_AI_APEX_GEAR 1
 
 // Uncomment this if you want Apex weapons in loot crates
 //#define USE_APEX_WEAPONS_IN_CRATES 1
@@ -53,7 +59,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	/*General settings for dynamic missions*/
 	DMS_DynamicMission					= true;						// Enable/disable dynamic mission system.
 	DMS_MaxBanditMissions				= 7;						// Maximum number of Bandit Missions running at the same time
-	DMS_TimeToFirstMission				= [60,120];				// [Minimum,Maximum] time between first mission spawn. | DEFAULT: 3-7 minutes.
+	DMS_TimeToFirstMission				= [60,90];				// [Minimum,Maximum] time between first mission spawn. | DEFAULT: 3-7 minutes.
 	DMS_TimeBetweenMissions				= [90,360];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
 	DMS_MissionTimeout					= [1200,1800]; 				// [Minimum,Maximum] time it will take for a mission to timeout | DEFAULT: 15-30 mins
 	DMS_MissionTimeoutResetRange		= 1500;						// If a player is this close to a mission then it won't time-out. Set to 0 to disable this check.
@@ -77,7 +83,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	DMS_playerNearRadius				= 100;						// How close a player has to be to a mission in order to satisfy the "playerNear" mission requirement (can be customized per mission).
 
-	DMS_AI_KillPercent					= 100;						// The percent amount of AI that need to be killed for "killPercent" mission requirement (NOT IMPLEMENTED)
+	DMS_AI_KillPercent					= 90;						// The percent amount of AI that need to be killed for "killPercent" mission requirement (NOT IMPLEMENTED)
 
 	/*Mission Marker settings*/
 	DMS_ShowDifficultyColorLegend		= false;						// Whether or not to show a "color legend" at the bottom left of the map that shows which color corresponds to which difficulty. I know it's not very pretty, meh.
@@ -191,7 +197,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											//"dynamicTextRequest",			// You should use either "dynamicTextRequest" or "textTilesRequest", and I think "textTilesRequest" looks better, but this is less performance-intensive.
 											//"standardHintRequest",		// Hints are a bit wonky...
 											//"textTilesRequest",			// Keep in mind you can only have 1 "text tile" message up at a time, so the message will disappear if the player gets a kill or something while the message is shown. This message type is also performance-intensive, so I advise against it.
-											//"systemChatRequest",			// Always nice to show in chat so that players can scroll up to read the info if they need to.
+											"systemChatRequest",			// Always nice to show in chat so that players can scroll up to read the info if they need to.
 											"ExileToasts"					// Default notification type since Exile 0.98, see (http://www.exilemod.com/devblog/new-ingame-notifications/)
 										];
 
@@ -235,46 +241,10 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	DMS_RandomBanditMissionsOnStart		= 0;						// Number of (random) bandit missions to spawn when the server starts, just so players don't have to wait for missions to spawn.
 	DMS_BanditMissionTypes =			[			//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
-											["bandits",3],
-											["bauhaus",3],
-											["beertransport",3],
-											["behindenemylines",3],
-											["blackhawkdown",3],
-											["cardealer",3],
-											["construction",4],
-											["donthasslethehoff",3],
-											["foodtransport",3],
-											["guntransport",3],
-											["humanitarian",3],
-											["lost_battalion",3],
-											["medical",3],
-											["mercbase",2],
-											["mercenaries",3],
-											["nedbandit1_mission",3],
-											["nedcashbandits_mission",3],
-											["nedbuilding1_mission",3],
-											["nedcar_mission",4],
-											["nedguns1_mission",3],
-											["nedhatchback_mission",2],
-											["nedhunter_mission",1],
-											["nedifrit_mission",1],
-											["nedHMMWV_mission",1],
-											["nedGAZ_mission",1],  		//RHS
-											["nedTaru_mission",1],
-											["nedVAN_mission",1],
-											["nedSUV_mission",2],
-											["nedTruck_mission",1],
-											["nedjeep_mission",2],
-											["nedlittlebird_mission",1],
-											["nedmedical1_mission",3],
-											["nedoffroad_mission",3],
-											["nedresearch_mission",3],
-											["nedsnipercamp_mission",3],
-											["nedstrider_mission",2],
-											["nedural_mission",3],
-											["roguenavyseals",3],
-											["thieves",3],
-											["walmart",2]
+											["Steal_Strider_AR_T2-T4_mission", 3],
+											["Steal_Ifrit_AR_T2-T4_mission", 3],
+											["Steal_Hunter_AR_T2-T4_mission", 3],
+											
 
 										];
 
@@ -493,7 +463,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_AI_destroyStaticWeapon_chance	= 60;						// Percent chance that a static weapon will be destroyed (only applied if "DMS_AI_destroyStaticWeapon" is true)
 
 	DMS_static_weapons =				[							// Static weapons for AI
-											"O_HMG_01_high_F"
+											#include "Weapons_AI_Statics.sqf"
 										];
 
 	DMS_ai_default_items =				[							// Toolbelt items each AI will spawn with
@@ -517,27 +487,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	//Assault Class
 	DMS_assault_weps =					[							// Assault Rifles
 											#ifdef GIVE_AI_APEX_WEAPONS
-											"arifle_AK12_F",
-											"arifle_ARX_ghex_F",
-											"arifle_CTAR_blk_F",
-											"arifle_SPAR_01_khk_F",
-											"arifle_SPAR_03_khk_F",
 											#endif
-											"arifle_Katiba_GL_F",
-											"arifle_MX_GL_Black_F",
-											"arifle_Mk20_GL_F",
-											"arifle_TRG21_GL_F",
-											"arifle_Katiba_F",
-											"arifle_MX_Black_F",
-									//		"arifle_TRG21_F",
-									//		"arifle_TRG20_F",
-									//		"arifle_Mk20_plain_F",
-									//		"arifle_Mk20_F",
-											"Exile_Weapon_AK107",
-											"Exile_Weapon_AK107_GL",
-											"Exile_Weapon_AK74_GL",
-											"Exile_Weapon_AK47",
-											"Exile_Weapon_AKS_Gold"
+											#include "Weapons_AI_Assault.sqf"
+											
 										];
 	DMS_assault_pistols =				[							// Pistols for Assault Class (Set to empty array if you don't want to give them any pistols)
 											"hgun_ACPC2_F",
@@ -636,8 +588,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"V_TacChestrig_grn_F",
 											"V_PlateCarrier2_tna_F",
 											"V_PlateCarrierSpec_tna_F",
-											"V_PlateCarrierGL_tna_F",
-											"V_TacVest_gen_F",
+											"V_PlateCarrierGL_tna_F",											
 											"V_PlateCarrier1_rgr_noflag_F",
 											#endif
 											#include "Vests_RHS.sqf"
@@ -648,8 +599,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"V_PlateCarrierGL_rgr",
 											"V_PlateCarrierSpec_blk",
 											"V_PlateCarrierSpec_mtp",
-											"V_PlateCarrierL_CTRG",
-											"V_TacVest_blk_POLICE",
+											"V_PlateCarrierL_CTRG",											
 											"V_PlateCarrierIA2_dgtl"
 										];
 	DMS_assault_backpacks =				[							// Backpacks for Assault Class
@@ -658,30 +608,20 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"B_FieldPack_ghex_F",
 											"B_ViperLightHarness_khk_F",
 											#endif
-											"B_Bergen_rgr",
 											"B_Carryall_oli",
 											"B_Kitbag_mcamo",
 											"B_Carryall_cbr",
 											"B_FieldPack_oucamo",
-											"B_FieldPack_cbr",
-											"B_Bergen_blk"
+											"B_FieldPack_cbr"
 										];
 
 	//Machine Gun Class
 	DMS_MG_weps	=						[							// Machine Guns
 											#ifdef GIVE_AI_MARKSMAN_DLC_WEAPONS
-											"MMG_01_hex_F",
-											"MMG_02_black_F",
 											#endif
-
 											#ifdef GIVE_AI_APEX_WEAPONS
-											"LMG_03_F",
 											#endif
-											"LMG_Zafir_F",
-											"LMG_Mk200_F",
-											"arifle_MX_SW_Black_F",
-											"Exile_Weapon_RPK",
-											"Exile_Weapon_PKP"
+											#include "Weapons_AI_MG.sqf"
 										];
 	DMS_MG_pistols =				[							// Pistols for Assault Class (Set to empty array if you don't want to give them any pistols)
 											"hgun_ACPC2_F",
@@ -772,11 +712,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 										];
 	DMS_MG_vests =						[							// Vests for MG Class
 											#ifdef GIVE_AI_APEX_GEAR
-											"V_TacChestrig_grn_F",
 											"V_PlateCarrier2_tna_F",
 											"V_PlateCarrierSpec_tna_F",
 											"V_PlateCarrierGL_tna_F",
-											"V_TacVest_gen_F",
 											"V_PlateCarrier1_rgr_noflag_F",
 											#endif
 											"V_PlateCarrierH_CTRG",
@@ -788,9 +726,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"V_PlateCarrierSpec_mtp",
 											"V_PlateCarrierL_CTRG",
 											"V_TacVest_blk_POLICE",
-											"V_PlateCarrierIA2_dgtl",
-											"V_HarnessO_brn",
-											"V_HarnessO_gry"
+											"V_PlateCarrierIA2_dgtl"						
+											
 										];
 	DMS_MG_backpacks =					[							// Backpacks for MG Class
 											#ifdef GIVE_AI_APEX_GEAR
@@ -798,35 +735,20 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"B_Carryall_ghex_F",
 											"B_ViperHarness_ghex_F",
 											"B_ViperLightHarness_ghex_F",
-											#endif
-											"B_Bergen_rgr",
+											#endif											
 											"B_Carryall_oli",
 											"B_Kitbag_mcamo",
-											"B_Carryall_cbr",
-											"B_Bergen_blk"
+											"B_Carryall_cbr",											
 										];
 
 	//Sniper Class
 	DMS_sniper_weps =					[							// Sniper Rifles
-											"srifle_EBR_F",
-											"srifle_GM6_F",
-											"srifle_LRR_F",
-											"arifle_MXM_Black_F",
-											"srifle_DMR_01_F",
 											#ifdef GIVE_AI_MARKSMAN_DLC_WEAPONS
-											"srifle_DMR_02_F",
-											"srifle_DMR_03_woodland_F",
-											//"srifle_DMR_04_F",			// Does anybody like the ASP-1? :p
-											"srifle_DMR_05_blk_F",
-											"srifle_DMR_06_olive_F",
 											#endif
 
 											#ifdef GIVE_AI_APEX_WEAPONS
-											"srifle_DMR_07_ghex_F",
 											#endif
-											"Exile_Weapon_DMR",
-											"Exile_Weapon_SVD",
-											"Exile_Weapon_VSSVintorez"
+											#include "Weapons_AI_Sniper.sqf"
 										];
 	DMS_sniper_pistols =				[							// Pistols for Assault Class (Set to empty array if you don't want to give them any pistols)
 											#ifdef GIVE_AI_APEX_WEAPONS
@@ -927,10 +849,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"V_PlateCarrierSpec_blk",
 											"V_PlateCarrierSpec_mtp",
 											"V_PlateCarrierL_CTRG",
-											"V_TacVest_blk_POLICE",
-											"V_PlateCarrierIA2_dgtl",
-											"V_HarnessO_brn",
-											"V_HarnessO_gry"
+											"V_PlateCarrierIA2_dgtl"											
+											
 										];
 	DMS_sniper_backpacks =				[							// Backpacks for Sniper Class
 											#ifdef GIVE_AI_APEX_GEAR
@@ -942,11 +862,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"B_ViperLightHarness_ghex_F",
 											"B_ViperLightHarness_khk_F",
 											#endif
-											"B_Bergen_rgr",
 											"B_Carryall_oli",
 											"B_Kitbag_mcamo",
-											"B_Carryall_cbr",
-											"B_Bergen_blk"
+											"B_Carryall_cbr"											
 										];
 
 	DMS_ai_SupportedClasses =			[							// Allowed AI classes. If you want to create your own class, make sure you define everything as I've defined above, and add it here
@@ -995,11 +913,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_ai_remove_launchers				= true;						// Remove rocket launchers on AI death
 
 	DMS_AI_wep_launchers_AT =			[							// AT Launchers
-											#ifdef GIVE_AI_APEX_WEAPONS
-										
+											#ifdef GIVE_AI_APEX_WEAPONS										
 											#endif
-											"launch_RPG7_F"
-//											"rhs_weap_rshg2"
+											#include "Weapons_AI_Launchers.sqf"
 										];
 	DMS_AI_wep_launchers_AA =			[							// AA Launchers
 											""
@@ -1062,15 +978,10 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 											#ifdef USE_APEX_WEAPONS_IN_CRATES
 											#endif
-									#include "Weapons_Apex.sqf"		
-									#include "Weapons_Exile.sqf"
-									#include "Weapons_RHS.sqf"
-									#include "Weapons_Bnae.sqf"
-							//		#include "Weapons_NIA.sqf"		
-							//		#include "Weapons_MAS.sqf"
-									
-											"Exile_Melee_Axe",
-											"Exile_Melee_SledgeHammer"
+									#include "Weapons_Loot_Apex.sqf"		
+									#include "Weapons_Loot_Exile.sqf"
+									#include "Weapons_Loot_RHS.sqf"
+									#include "Weapons_Loot_Bnae.sqf"											
 										];
 	DMS_BoxFood =						[							// List of food that can spawn in a crate.
 											"Exile_Item_GloriousKnakworst_Cooked",
@@ -1197,17 +1108,16 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_RareLootAmount					= 1;						// How many rare loot items to add.
 	DMS_RareLootList =					[							// List of rare loot to spawn
 											"Exile_Item_SafeKit",
-											"Exile_Item_CodeLock"
+											"Exile_Item_CodeLock",
+											"Exile_Melee_SledgeHammer"
 										];
 	DMS_RareLootChance					= 10;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
 
 	// Vehicles
 	DMS_ArmedVehicles =					[							// List of armed vehicles that can spawn
 											#ifdef USE_APEX_VEHICLES
-											"B_T_LSV_01_armed_F",
-											"O_T_LSV_02_armed_F",
 											#endif
-											"Exile_Car_Offroad_Armed_Guerilla01"
+											#include "Vehicles_AI_Patrol.sqf"
 										];
 
 	DMS_MilitaryVehicles =				[							// List of (unarmed) military vehicles that can spawn
