@@ -89,14 +89,6 @@ _building = createVehicle ["Land_Cargo_HQ_V2_F",[(_pos select 0) - 10, (_pos sel
 
 _wreck = createVehicle ["Land_Wreck_Ural_F",[(_pos select 0) - 10, (_pos select 1),-0.2],[], 0, "CAN_COLLIDE"];
 
-// Set crate loot values
-_crate_loot_values =
-[
-	3,				// Weapons
-	[15,DMS_BoxTruckFood],		// Items
-	3 				// Backpacks
-];
-
 // Define mission-spawned AI Units
 _missionAIUnits =
 [
@@ -108,7 +100,7 @@ _missionObjs =
 [
 	[_building]+[_wreck]+[_veh],			// No spawned buildings
 	[],
-	[[_crate,_crate_loot_values]]
+	[[_crate,"TCFood"]]
 ];
 
 // Define Mission Start message
