@@ -38,3 +38,7 @@ This repository has the singular purpose of version management for the Malden Se
 * **ADDON** [Exile_Z](https://github.com/kuplion/ExileZ-Mod)
 * **ADDON** [Exile_Z_Crashes](https://github.com/kuplion/ExileZ-Crashes)
 * **OTHER** [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+## Credits
+* All base credit goes to the original mod authors.
+* Credit from theres goes to Troy and Cypherdiaz.
