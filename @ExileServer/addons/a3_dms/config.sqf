@@ -969,12 +969,42 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 												["Exile_Item_DogFood_Cooked", 3],
 												["Exile_Item_EMRE", 6],										
 												["Exile_Item_InstantCoffee", 6],
-												["Exile_Item_CanOpener", 3]
+												["Exile_Item_CanOpener", 3]												
 											],
 											[
-												//BACKSPACE
+												//BACKPACK
 												["B_Carryall_oli", 2],										
 												["B_Carryall_cbr", 2]
+											]
+										];
+//Custom Loot Crate for Cypher_TruckCrash_Const Mission
+	DMS_CrateCase_TCConst=				[
+											[
+												//WEAPONS
+												["Exile_Melee_Axe",1],
+												["bnae_rk95r_camo1_virtual",2]
+											],
+											[
+												//ITEMS
+												["30Rnd_762x39_AK47_M", 3],
+												["Exile_Item_CookingPot",1],
+												["Exile_Item_SandBagsKit_Long",1],
+												["Exile_Item_SandBagsKit_Corner",2],
+												["Exile_Item_HBarrier5Kit", 1],
+												["Exile_Item_Handsaw",1],
+												["Exile_Item_Screwdriver",1],
+												["Exile_Item_WaterCanisterDirtyWater",3],
+												["Exile_Item_CodeLock",2],
+												["Exile_Item_DuctTape",3],
+												["Exile_Item_PortableGeneratorKit",1],
+												["Exile_Item_MetalScrews",5],
+												["Exile_Item_ExtensionCord",1],
+												["Exile_Item_FloodLightKit",1]
+											],
+											[
+												//BACKPACK
+												["B_Carryall_cbr",1],
+												["B_Kitbag_mcamo",1]
 											]
 										];
 //UNUSED CUSTOM CRATE										
