@@ -1007,6 +1007,44 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 												["B_Kitbag_mcamo",1]
 											]
 										];
+//High Grade Custom Crate
+	DMS_CrateCase_High = 				[
+											[
+												//WEAPONS
+												["srifle_LRR_F",1],
+												["rhs_weap_pp2000_folded",1],
+												["launch_RPG7_F",1],
+												["LMG_Mk200_F",1],
+												["MMG_01_tan_F",1],
+												["rhs_weap_t5000",1],
+												["rhs_weap_m40a5_wd",1],
+												["rhs_weap_M320",1],
+												["bnae_rk95r_virtual",1],
+												["Exile_Weapon_KSVK",1],
+												["hgun_Pistol_heavy_01_F",2]	
+											],
+											[
+												//ITEMS
+											],
+											[
+												//BACKPACK
+												["B_Carryall_cbr",1],
+												["B_Kitbag_mcamo",1]
+											]
+										];
+//Medium Grade Custom Crate
+	DMS_CrateCase_Medium = 				[
+											[
+												//WEAPONS
+											],
+											[
+												//ITEMS
+											],
+											[
+												//BACKPACK
+											]
+										];
+
 //UNUSED CUSTOM CRATE										
 	DMS_CrateCase_Sniper =				[							// If you pass "Sniper" in _lootValues, then it will spawn these weapons/items/backpacks
 											[
